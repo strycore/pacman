@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include"gamedata.h"
 #include"board.h"
 #include"pac.h"

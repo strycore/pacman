@@ -119,7 +119,7 @@ u->waitsync();			//don't return until everything is drawn
  oldtemp=oldlist;
  while (oldtemp) {	//delete elements in the now previous sprite list
   oldnext=oldtemp->next;
-  delete oldnext;
+  delete oldtemp;
   oldtemp=oldnext;
  }
 if (zero && oldlist) {	//personal thingie used for debug, not useful

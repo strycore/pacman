@@ -107,7 +107,7 @@ gh[1]= new Ghost(Colour::GHOSTCOLOUR2,GHOST2X,GHOST2Y); //initializing ghost 2
 gh[2]= new Ghost(Colour::GHOSTCOLOUR3,GHOST3X,GHOST3Y); //initializing ghost 3
 gh[3]= new Ghost(Colour::GHOSTCOLOUR4,GHOST4X,GHOST4Y); //initializing ghost 4
     
-inp=u->getinput(); 		//gets whether the game is done
+// inp=u->getinput(); 		//gets whether the game is done
 
 writetext();
 

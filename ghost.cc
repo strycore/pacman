@@ -165,7 +165,7 @@ if (i) {			//if found
 	    }
 }
 
-Ghost::go(Pacman *pac) {	//go for pacman: do ghost code
+int Ghost::go(Pacman *pac) {	//go for pacman: do ghost code
 typ w;				//what type is at next coordinates
 int i=1;			//moved or not?
 int xx,yy;			//coordinates

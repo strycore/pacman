@@ -18,12 +18,14 @@ OBJS = arg.o blank.o board.o bonus.o bonuslif.o bonuspnt.o \
 	t180.o t270.o t90.o timing.o usrinter.o vertwall.o \
 	walls.o
 
-CURSES = -lcurses -ltermcap
+CURSES = -lcurses
 
 /* most X11 screens are rather large, you might wisht to use "double" mode */
-/* CXXEXTRA_DEFINES = -DDOUBLE */
+CXXEXTRA_DEFINES = -DDOUBLE -fno-rtti -fno-exceptions -fPIC
+CCLINK = g++
 
 NormalProgramTarget(pacman,$(OBJS),$(DEPXLIB),$(CURSES),$(XLIB))
 InstallProgram(pacman,$(BINDIR))
 InstallManPage(pacman,$(MANDIR))
+AllTarget(pacman)
 DependTarget()

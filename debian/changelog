@@ -1,3 +1,18 @@
+pacman (10-15) unstable; urgency=low
+
+  * New Maintainer (closes: #182985).
+  * Update build system to use debhelper.
+  * debian/control: Std-Ver (bumped to 3.6.1).
+  * pacman.man: escaped bare dash.
+
+ -- Joe Nahmias <jello@debian.org>  Wed, 29 Oct 2003 12:52:30 -0500
+
+pacman (10-14) unstable; urgency=low
+
+  * Rebuilt with g++ 3.3 which fixes old libstdc++2.10-glibc2.2 dep (closes: #210503)
+
+ -- Peter Joseph  <kneecaps@debian.org>  Fri, 12 Sep 2003 13:37:11 +0100
+
 pacman (10-13) unstable; urgency=low
 
   * Fixed HPPA build problems thanks to Snowman (closes: #104861)

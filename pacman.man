@@ -5,7 +5,7 @@
 .\"
 .TH PACMAN 6
 .SH NAME
-pacman - the game of pacman
+pacman \- the game of pacman
 .SH SYNOPSIS
 .B "pacman"
 [grey]

@@ -1,9 +1,9 @@
 Source: pacman
 Section: games
 Priority: optional
-Maintainer: Peter Joseph <kneecaps@debian.org>
-Standards-Version: 3.2.1.0
-Build-Depends: xlibs-dev, xutils, libncurses5-dev
+Maintainer: Joe Nahmias <jello@debian.org>
+Standards-Version: 3.6.1.0
+Build-Depends: debhelper (>= 4), xlibs-dev, xutils, libncurses5-dev
 
 Package: pacman
 Architecture: any
@@ -15,4 +15,3 @@ Description: Chase Monsters in a Labyrinth
  then you can, for a limited amount of time, chase and eat the ghosts.
  There is also bonus available, for a limited amount of time.
  An X gives just points, but a little pacman gives an extra life.
-

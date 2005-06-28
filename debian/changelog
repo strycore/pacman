@@ -1,3 +1,9 @@
+pacman (10-15build1) breezy; urgency=low
+
+  * Rebuild for new C++ ABI
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 28 Jun 2005 08:44:51 +0000
+
 pacman (10-15) unstable; urgency=low
 
   * New Maintainer (closes: #182985).

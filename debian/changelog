@@ -1,3 +1,12 @@
+pacman (10-16) unstable; urgency=low
+
+  * debian/control: xlibs-dev transition (closes: #346894).
+  * debian/control: bump Std-Ver, no changes.
+  * debian/menu: quote strings to satisfy lintian.
+  * debian/copyright: update address for FSF to satisfy lintian.
+
+ -- Joe Nahmias <jello@debian.org>  Fri, 13 Jan 2006 04:26:04 +0000
+
 pacman (10-15) unstable; urgency=low
 
   * New Maintainer (closes: #182985).

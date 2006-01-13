@@ -1,8 +1,11 @@
-pacman (10-15build1) breezy; urgency=low
+pacman (10-16) unstable; urgency=low
 
-  * Rebuild for new C++ ABI
+  * debian/control: xlibs-dev transition (closes: #346894).
+  * debian/control: bump Std-Ver, no changes.
+  * debian/menu: quote strings to satisfy lintian.
+  * debian/copyright: update address for FSF to satisfy lintian.
 
- -- Matthias Klose <doko@ubuntu.com>  Tue, 28 Jun 2005 08:44:51 +0000
+ -- Joe Nahmias <jello@debian.org>  Fri, 13 Jan 2006 04:26:04 +0000
 
 pacman (10-15) unstable; urgency=low
 

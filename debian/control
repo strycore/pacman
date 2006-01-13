@@ -2,8 +2,8 @@ Source: pacman
 Section: games
 Priority: optional
 Maintainer: Joe Nahmias <jello@debian.org>
-Standards-Version: 3.6.1.0
-Build-Depends: debhelper (>= 4), xlibs-dev, xutils, libncurses5-dev
+Standards-Version: 3.6.2.0
+Build-Depends: debhelper (>= 4), xutils, libncurses5-dev, libx11-dev, x-dev
 
 Package: pacman
 Architecture: any

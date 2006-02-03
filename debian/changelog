@@ -1,3 +1,9 @@
+pacman (10-16ubuntu1) dapper; urgency=low
+
+  * Build-depends: makedepend, libxext-dev
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri,  3 Feb 2006 00:33:28 -0700
+
 pacman (10-16) unstable; urgency=low
 
   * debian/control: xlibs-dev transition (closes: #346894).

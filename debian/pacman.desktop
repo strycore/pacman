@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pacman
+GenericName=Arcade Game
+Comment=A simple clone of the classic arcade game
+Exec=pacman
+Icon=pacmania.xpm
+Type=Application
+Categories=Game;ArcadeGame;
+

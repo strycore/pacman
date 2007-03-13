@@ -49,6 +49,11 @@ install: build
 #	$(MAKE) install DESTDIR=$(CURDIR)/debian/pacman
 	dh_install
 
+	#install desktop and icon
+	install -m 644 -D $(CURDIR)/debian/pacman.desktop \
+		$(CURDIR)/debian/pacman/usr/share/applications/pacman.desktop
+	install -m 644 -D $(CURDIR)/debian/pacmania.xpm \
+		$(CURDIR)/debian/pacman/usr/share/pixmaps/pacmania.xpm
 
 # Build architecture-independent files here.
 binary-indep: build install

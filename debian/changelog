@@ -1,3 +1,11 @@
+pacman (10-16ubuntu2) feisty; urgency=low
+
+  * Add icon and desktop (Closes: LP#91736).
+  * Update Maintainer field in debian/control, see:
+    https://wiki.ubuntu.com/DebianMaintainerField
+
+ -- Cesare Tirabassi <norsetto@alice.it>  Tue, 13 Mar 2007 11:51:05 +0100
+
 pacman (10-16ubuntu1) dapper; urgency=low
 
   * Build-depends: makedepend, libxext-dev

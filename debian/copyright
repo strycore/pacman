@@ -6,9 +6,18 @@ Upstream Author:	Roar Thronaes <roart@nvg.unit.no>
 
 Copyright:
 
+Copyright (C) 1995  Roar Thronaes
+email: roart@nvg.unit.no
+
+Copyright applies to *.h and *.cc files, even though no copyright is
+stated in them.
+
+License:
+
    This package is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; version 2 dated June, 1991.
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
  
    This package is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of

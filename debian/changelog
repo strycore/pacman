@@ -1,3 +1,15 @@
+pacman (10-17) unstable; urgency=low
+
+  * imake has moved to xutils-dev, closes: #485214.
+  * use nanosleep to avoid chewing up the cpu, closes: #348425.
+  * add a menu icon, thanks Mark Purcell!  Closes: #273457.
+  * bump debhelper compat to 6, no changes.
+  * Update std-ver to 3.8.0
+    + change menu section to Games/Action [was Games/Arcade].
+  * Updated copyright and license information.
+
+ -- Joe Nahmias <jello@debian.org>  Mon, 16 Jun 2008 23:30:58 -0400
+
 pacman (10-16) unstable; urgency=low
 
   * debian/control: xlibs-dev transition (closes: #346894).

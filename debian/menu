@@ -1,1 +1,1 @@
-?package(pacman): needs="x11" section="Games/Arcade" title="PacMan" command="/usr/games/pacman"
+?package(pacman): needs="x11" section="Games/Action" title="PacMan" command="/usr/games/pacman" icon="/usr/share/pixmaps/pacman.xpm"

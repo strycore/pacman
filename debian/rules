@@ -14,39 +14,25 @@ else
 endif
 export CFLAGS
 
-ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-	INSTALL_PROGRAM += -s
-endif
-
 build: build-stamp
 build-stamp:
 	dh_testdir
-
-	# Add here commands to compile the package.
 	xmkmf -a
 	$(MAKE)
-
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-
-	# Add here commands to clean up after the build process.
-	-$(MAKE) clean
-	rm -f Makefile
-
-	dh_clean 
+	[ ! -f Makefile ] || $(MAKE) clean
+	dh_clean Makefile
 
 install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
-
-	# Add here commands to install the package into debian/pacman.
-#	$(MAKE) install DESTDIR=$(CURDIR)/debian/pacman
 	dh_install
 
 	#install desktop and icon
@@ -56,14 +42,15 @@ install: build
 		$(CURDIR)/debian/pacman/usr/share/pixmaps/pacmania.xpm
 
 # Build architecture-independent files here.
-binary-indep: build install
+binary-indep:
 # We have nothing to do by default.
 
 # Build architecture-dependent files here.
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
+	dh_desktop 
 	dh_installdocs
 	dh_installexamples
 	dh_installmenu

@@ -1,3 +1,23 @@
+pacman (10-17ubuntu1) intrepid; urgency=low
+
+  * Merge from Debian unstable (LP: #241732), remaining Ubuntu changes: 
+    + debian/control: update build-depends and Maintainer field as per spec  
+    + Provide an icon and a .desktop file
+
+ -- Paolo Naldini <hattory@ubuntu.com>  Tue, 17 Jun 2008 12:31:43 +0200
+
+pacman (10-17) unstable; urgency=low
+
+  * imake has moved to xutils-dev, closes: #485214.
+  * use nanosleep to avoid chewing up the cpu, closes: #348425.
+  * add a menu icon, thanks Mark Purcell!  Closes: #273457.
+  * bump debhelper compat to 6, no changes.
+  * Update std-ver to 3.8.0
+    + change menu section to Games/Action [was Games/Arcade].
+  * Updated copyright and license information.
+
+ -- Joe Nahmias <jello@debian.org>  Mon, 16 Jun 2008 23:30:58 -0400
+
 pacman (10-16ubuntu2) feisty; urgency=low
 
   * Add icon and desktop (Closes: LP#91736).

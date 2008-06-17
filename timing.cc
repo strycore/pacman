@@ -10,6 +10,7 @@
  static double tot_tid;				//time diffenence
  static  clock_t cl;				//clock time
  static int toTid;				//time
+ static struct timespec remain;
 
 #elif defined MSWIN
  static DWORD *tp1,*tp2;			//current and previous time
@@ -18,6 +19,7 @@
 
 #ifdef UNIX      
 #include<unistd.h>
+#include<time.h>
       
 //write a such struct
 void printtp(struct timeval tp) {                     
@@ -92,7 +94,8 @@ do {
  tot_tid=difftime(*tp2,*tp1);		//compute difference between moments
  if (tot_tid<(0.25/super)) 		//if time interval not yet used up
 #ifdef UNIX
- sleep(0);				//sleep
+ remain.tv_sec = 0; remain.tv_nsec = ((0.25/super) - tot_tid) * 1000000000;
+ nanosleep(&remain, NULL);				//sleep
 #elif MSWIN
  MSG msg;     
  if (PeekMessage(&msg, NULL, NULL, NULL,PM_NOREMOVE)) 	//if there is msg

@@ -1,11 +1,10 @@
 Source: pacman
 Section: games
 Priority: optional
-XSBC-Original-Maintainer: Joe Nahmias <jello@debian.org>
-Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Standards-Version: 3.6.2.0
 Build-Depends: debhelper (>= 6), xutils-dev, libncurses5-dev, libx11-dev,
- libxext-dev, xutils, x-dev, makedepend
+ libxext-dev, x11proto-core-dev, 
 
 Package: pacman
 Architecture: any

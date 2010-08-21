@@ -1,3 +1,12 @@
+pacman (10-17ubuntu2) maverick; urgency=low
+
+  * Modify Build-Depends to fix FTBFS (LP: #620359):
+    + Drop BD on makedepend as xutils-dev provides it
+    + BD on x11proto-core-dev instead of x-dev (it provides x-dev)
+    + Drop BD on xutils (now a transitional stub)
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sat, 21 Aug 2010 00:36:37 +0200
+
 pacman (10-17ubuntu1) intrepid; urgency=low
 
   * Merge from Debian unstable (LP: #241732), remaining Ubuntu changes: 

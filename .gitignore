@@ -4,3 +4,4 @@ pacman
 pacman._man
 pacman.layout
 *.cbTemp
+*.save

@@ -7,6 +7,7 @@
 #include"direc.h"
 
 typedef enum {dead,normal,super} stat;
+int is_wall(typ);
 
 class Pacman : public Moveables
 {

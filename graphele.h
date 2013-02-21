@@ -13,8 +13,6 @@
 #define PIXMAPTYPE Pixmap
 #elif defined MSWIN
 #define PIXMAPTYPE HBITMAP
-#elif defined VTX
-#define PIXMAPTYPE char
 #endif
 
 class GraphElement : public Object

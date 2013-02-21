@@ -17,8 +17,6 @@ typedef enum {Mouse,Keyboard} inp_type;
 #define GID_TYPE Pixmap
 #elif defined MSWIN
 #define GID_TYPE HBITMAP
-#elif defined VTX
-#define GID_TYPE char
 #endif
 
 class UserInterface : public Object

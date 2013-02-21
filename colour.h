@@ -12,9 +12,6 @@
 #elif defined MSWIN
 #define COLOURTYPE COLORREF
 #define COLOURNAME COLORREF
-#elif defined VTX
-#define COLOURTYPE int
-#define COLOURNAME int
 #endif
 
 class Colour : public Object

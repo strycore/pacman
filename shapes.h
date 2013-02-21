@@ -4,8 +4,6 @@
 #define SHAPETYPE char	//the bits in the char (8 bits)
 #elif defined MSWIN
 #define SHAPETYPE short	//2 bytes, 16 bits needed
-#elif defined VTX
-#define SHAPETYPE char	//the actual character
 #endif
 
 #ifdef XWIN	//X-Win only, seems to want it mirrored about Y-axis
@@ -165,56 +163,6 @@ static SHAPETYPE t180_bits[]= {0x3c,0x7e,0xff,0xff,0xff,0xff,0x00,0x00};
 
 static SHAPETYPE t270_bits[]= {0x3c,0x7c,0xfc,0xfc,0xfc,0xfc,0x7c,0x3c};
 
-#elif defined VTX			//vt??? unix only
-static SHAPETYPE pacman0_bits[]= {'P'};
-static SHAPETYPE pacmanleft_bits[]= {'P'};
-static SHAPETYPE pacmanright_bits[]= {'P'};
-static SHAPETYPE pacmanup_bits[]=   {'P'};
-static SHAPETYPE pacmandown_bits[]= {'P'};
-
-static SHAPETYPE vertwall_bits[]= {'|'};
-
-static SHAPETYPE horiwall_bits[]= {'-'};
-
-static SHAPETYPE blank_bits[]= {' '};
-
-static SHAPETYPE cross_bits[]= {'+'};
-
-static SHAPETYPE food_bits[]= {'.'};
-
-static SHAPETYPE superfood_bits[]= {'o'};
-
-static SHAPETYPE ghost_bits[]= {'G'};
-
-static SHAPETYPE corner2_bits[]= {'X'};
-
-static SHAPETYPE corner3_bits[]= {'X'};
-
-static SHAPETYPE corner4_bits[]= {'X'};
-
-static SHAPETYPE corner1_bits[]= {'X'};
-
-static SHAPETYPE specwall_bits[]= {'_'};
-
-static SHAPETYPE bonuspoint_bits[]= {'?'};
-
-static SHAPETYPE bonuslife_bits[]= {'p'};
-
-static SHAPETYPE e180_bits[]= {'-'};
-
-static SHAPETYPE e90_bits[]= {'|'};
-
-static SHAPETYPE e0_bits[]= {'-'};
-
-static SHAPETYPE e270_bits[]= {'|'};
-
-static SHAPETYPE t0_bits[]= {'-'};
-
-static SHAPETYPE t270_bits[]= {'|'};
-
-static SHAPETYPE t180_bits[]= {'-'};
-
-static SHAPETYPE t90_bits[]= {'|'};
 #endif
 
 

@@ -114,23 +114,4 @@ void GraphElement::pix(HBITMAP *p,short map[],COLOURNAME foreground, COLOURNAME 
     ReleaseDC(hwnd, hDC);		//release device context
     *p=hBitmap;				//"return" the bitmap
 }
-
-#elif defined VTX			//vt??? unix only
-void GraphElement::draw(int x,int y)  	//draw graphical element
-{
-    mvaddch(UNITWIDTH*y,TEXTSPACE+UNITWIDTH*x,pixmap);
-}
-
-void GraphElement::consfn()  		//function to help with construction
-{
-}					//not really necessery here
-
-GraphElement::~GraphElement(void)  	//destructor
-{
-}					//not really necessery here
-
-void GraphElement::pix(PIXMAPTYPE *p,SHAPETYPE map[],COLOURTYPE myforeground, COLOURTYPE mybackground)  		//create pixmap
-{
-    *p=*map;				//"return" it
-}
 #endif

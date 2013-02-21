@@ -8,7 +8,6 @@ class StaticElement : public Element
 public:
 
 
-
 };
 
 #endif

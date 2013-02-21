@@ -1,8 +1,8 @@
-#include"gboard.h"
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include"pac.h"
+#include "gboard.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "pac.h"
 
 G_Board* G_Board::_instance=0;
 

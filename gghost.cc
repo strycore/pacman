@@ -12,13 +12,8 @@ G_Ghost::G_Ghost(COLOURTYPE farge)
 
 G_Ghost::~G_Ghost(void)
 {
-#ifdef XWIN
     if (pixmap!=pixmapr) XFreePixmap(display,pixmapr);
     if (pixmap!=pixmapn) XFreePixmap(display,pixmapn);
-#elif defined MSWIN
-    if (pixmap!=pixmapr) DeleteObject(pixmapr);
-    if (pixmap!=pixmapn) DeleteObject(pixmapn);
-#endif
 }
 
 void G_Ghost::draw(int x,int y,int run)  //draw at x,y with running boolean

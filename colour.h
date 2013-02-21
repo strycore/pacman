@@ -6,21 +6,14 @@
 #include"object.h"
 
 //defines the type of the colour types
-#ifdef XWIN
 #define COLOURTYPE unsigned long
 #define COLOURNAME XColor
-#elif defined MSWIN
-#define COLOURTYPE COLORREF
-#define COLOURNAME COLORREF
-#endif
+
 
 class Colour : public Object
 {
-
-#ifdef XWIN			//X-Win only
     Display* display;		//pointer to display connection
     Colormap cmap;			//a colourmap
-#endif
 
 public:
     Colour(UserInterface*);		//constructor and initializer

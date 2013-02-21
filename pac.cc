@@ -16,19 +16,15 @@
 
 void pacexit(char *s)
 {
-#ifdef XWIN
     printf("%s\n",s);
     exit(1);
-#endif
 }
 
 // routine do display a warning if it should be
 
 void pacwarning(char *s)
 {
-#ifdef XWIN
     printf("Warning: %s\n",s);
-#endif
 }
 
 // checks whether pacman has eaten the bonus, or pacman or some ghost
@@ -70,7 +66,6 @@ void check(Board* bo,Gamedata *da,Pacman* pa,Ghost *gh[GHOSTS],Bonus *&bon)
 
 void writetext()   //just draw text
 {
-
     UserInterface *u=UserInterface::instance();
     Gamedata *da=Gamedata::instance();
 
@@ -87,19 +82,9 @@ void writetext()   //just draw text
     u->write(1,16,"Supertime");
 }
 
-#ifdef MSWIN
-int PASCAL WinMain(HANDLE hInstance, HANDLE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-{
-    UserInterface::sethInstance(hInstance);	//storing info from MS Window Manager
-    UserInterface::sethPrevInstance(hPrevInstance);
-    UserInterface::setlpCmdLine(lpCmdLine);
-    UserInterface::setnCmdShow(nCmdShow);
-#else
 main(int argc,char **argv)
 {
     Argument(argc, argv); 		// storing the command line arguments
-#endif
-
     int i,j; 			//plain counters
     Gamedata *da=Gamedata::instance(); //gamedata like score, hiscore, lives, levels etc
     Bonus *bon=0; 			//the bonus, it can be bonuslife or bonuspoint

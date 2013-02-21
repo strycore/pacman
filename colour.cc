@@ -26,10 +26,8 @@ Colour::Colour(UserInterface* u)  	//constructor
 {
     static int starts=0;			//to make sure only one construction
 
-#ifdef XWIN				//X-Win only
     Window window;				//our window
     int screen; 				//our screen
-#endif
 
     if (starts)   				//make sure it is initialized just once
     {
@@ -38,7 +36,6 @@ Colour::Colour(UserInterface* u)  	//constructor
     }
     starts=1;				//to make sure only one construction
 
-#ifdef XWIN
     display=u->getdisplay();		//get pointer to display connection
     screen=u->getscreen();			//get the screen
 
@@ -256,75 +253,10 @@ Colour::Colour(UserInterface* u)  	//constructor
     .flags=DoRed|DoGreen|DoBlue;
     if(XAllocColor(display,cmap,&)==0) pacexit("Colour initialization error");
     */
-
-#elif defined MSWIN				//MS-Win only
-
-    cyan=(RGB(0,255,255));
-    black=(RGB(0,0,0));
-    white=(RGB(255,255,255));
-    lightblue=(RGB(173,216,230));
-    yellow=(RGB(255,255,0));
-    red=(RGB(255,0,0));
-    orangered=(RGB(255,69,0));
-    violetred=(RGB(208,32,144));
-    violet=(RGB(238,130,238));
-    deepskyblue=(RGB(0,191,255));
-    gold=(RGB(255,215,0));
-    lightyellow=(RGB(255,255,0));
-
-    MYFOREGROUND =cyan;
-    MYBACKGROUND =black;
-    WALLCOLOUR =deepskyblue;
-    PACMANCOLOUR =yellow;
-    GHOSTCOLOUR1 =red;
-    GHOSTCOLOUR2 =violetred;
-    GHOSTCOLOUR3 =violet;
-    GHOSTCOLOUR4 =orangered;
-    RUNGHOSTCOLOUR =lightblue;
-    FOODCOLOUR =lightyellow;
-    SUPERFOODCOLOUR =gold;
-    BONUSPOINTCOLOUR =gold;
-    BONUSLIFECOLOUR =gold;
-
-    /*
-#define MYFOREGROUND RGB(0,255,255)
-#define MYBACKGROUND RGB(0,0,0)
-#define WALLCOLOUR RGB(0,191,255)
-#define PACMANCOLOUR RGB(255,255,0)
-#define GHOSTCOLOUR1 RGB(255,0,0)
-#define GHOSTCOLOUR2 RGB(208,32,144)
-#define GHOSTCOLOUR3 RGB(238,130,238)
-#define GHOSTCOLOUR4 RGB(255,69,0)
-#define RUNGHOSTCOLOUR RGB(173,216,230)
-#define FOODCOLOUR RGB(255,255,0)
-#define SUPERFOODCOLOUR RGB(255,215,0)
-#define BONUSPOINTCOLOUR RGB(255,215,0)
-#define BONUSLIFECOLOUR RGB(255,215,0)
-    */
-#endif
 }
 
 Colour::~Colour()
 {
-#ifdef XWIN			//X-Win only
     XFreeColormap(display,cmap);	//free the colourmap
-
-#elif defined MSWIN		//MS-Win only
-
-    /*
-    DeleteObject(cyan);
-    DeleteObject(black);
-    DeleteObject(white);
-    DeleteObject(lightblue);
-    DeleteObject(yellow);
-    DeleteObject(lightyellow);
-    DeleteObject(red);
-    DeleteObject(orangered);
-    DeleteObject(violetred);
-    DeleteObject(violet);
-    DeleteObject(deepskyblue);
-    DeleteObject(gold);
-    */
-#endif
 }
 

@@ -1,5 +1,4 @@
 #define XWIN
-//#define MSWIN
 #ifdef XWIN
 #define UNIX
 #endif

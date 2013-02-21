@@ -17,19 +17,11 @@ G_Pacman::G_Pacman()
 
 G_Pacman::~G_Pacman(void)
 {
-#ifdef XWIN
     if (pixmap!=pix0) XFreePixmap(display,pix0);
     if (pixmap!=pixl) XFreePixmap(display,pixl);
     if (pixmap!=pixr) XFreePixmap(display,pixr);
     if (pixmap!=pixd) XFreePixmap(display,pixd);
     if (pixmap!=pixu) XFreePixmap(display,pixu);
-#elif defined MSWIN
-    if (pixmap!=pix0) DeleteObject(pix0);
-    if (pixmap!=pixl) DeleteObject(pixl);
-    if (pixmap!=pixr) DeleteObject(pixr);
-    if (pixmap!=pixd) DeleteObject(pixd);
-    if (pixmap!=pixu) DeleteObject(pixu);
-#endif
 }
 
 void G_Pacman::draw(int x,int y,direction d,direction try_d)

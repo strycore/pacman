@@ -4,7 +4,7 @@
 #define BOARDHEIGHT 23
 
 
-#if defined(MSWIN) || !defined(DOUBLE)
+#if !defined(DOUBLE)
 #define UNITWIDTH 8		//pixmaps is 8x8
 #define UNITHEIGHT 8
 #else
@@ -14,7 +14,7 @@
 
 
 //defines different sizes for different fonts
-#ifdef XWIN
+
 #ifndef DOUBLE
 #define TEXTWIDTH 8
 #define TEXTHEIGHT 8
@@ -26,10 +26,7 @@
 #define FONT1 "8x16"
 #define FONT2 "7x14"
 #endif
-#elif defined MSWIN
-#define TEXTWIDTH 6
-#define TEXTHEIGHT 10
-#endif
+
 
 #define TEXTCHARSINLINE 15	//text characters befors board begins
 

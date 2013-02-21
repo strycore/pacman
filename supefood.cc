@@ -3,4 +3,3 @@
 SuperFood::SuperFood()
 {
 }
-

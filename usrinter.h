@@ -17,7 +17,6 @@ typedef enum {Mouse,Keyboard} inp_type;
 
 class UserInterface : public Object
 {
-
     static UserInterface* _instance;//pointer to the instance of this class
 
     static inp_type in;		//is the input from mouse or keyboard?

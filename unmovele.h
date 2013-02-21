@@ -1,12 +1,13 @@
-#ifndef __unmovele_h_ 
- #define __unmovele_h_
- #include"dynamiel.h"
+#ifndef __unmovele_h_
+#define __unmovele_h_
+#include"dynamiel.h"
 
-class UnmoveableElement : public DynamicElement {
-       
-public:       
-          
-          
+class UnmoveableElement : public DynamicElement
+{
+
+public:
+
+
 };
 
 #endif

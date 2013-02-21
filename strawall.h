@@ -1,13 +1,14 @@
-#ifndef __strawall_h_ 
+#ifndef __strawall_h_
 #define __strawall_h_
 #include"gwalls.h"
 
-class StraightWall : public G_Walls {
-         
-public:         
-         
-void draw(void);
+class StraightWall : public G_Walls
+{
+
+public:
+
+    void draw(void);
 
 };
 
-#endif   
+#endif

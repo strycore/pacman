@@ -1,11 +1,12 @@
-#ifndef __edible_h_ 
- #define __edible_h_
- #include"staticel.h"
+#ifndef __edible_h_
+#define __edible_h_
+#include"staticel.h"
 
-class Edible : public StaticElement {
-  
-public:  
- 
+class Edible : public StaticElement
+{
+
+public:
+
 };
 
-#endif 
+#endif

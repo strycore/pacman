@@ -1,5 +1,6 @@
 #include"supefood.h"
 
-SuperFood::SuperFood() {
+SuperFood::SuperFood()
+{
 }
 

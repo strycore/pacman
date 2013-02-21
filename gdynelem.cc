@@ -1,5 +1,8 @@
 #include"gdynelem.h"
 
-GID_TYPE DynamicGraphElement::getgid() {return pixmap;}
+GID_TYPE DynamicGraphElement::getgid()
+{
+    return pixmap;
+}
 
 

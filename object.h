@@ -3,8 +3,9 @@
 
 #include"basis.h"
 
-class Object {
+class Object
+{
 
 };
 
-#endif 
+#endif

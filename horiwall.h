@@ -1,13 +1,14 @@
-#ifndef __horiwall_h_ 
+#ifndef __horiwall_h_
 #define __horiwall_h_
 #include"strawall.h"
 
-class HorizontalWall : public StraightWall {
-         
-public:         
-         
-HorizontalWall();
+class HorizontalWall : public StraightWall
+{
+
+public:
+
+    HorizontalWall();
 
 };
 
-#endif   
+#endif

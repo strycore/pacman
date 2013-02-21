@@ -1,12 +1,13 @@
-#ifndef __gmoveabl_h_ 
+#ifndef __gmoveabl_h_
 #define __gmoveabl_h_
 #include"gdynelem.h"
 
-class G_Moveables : public DynamicGraphElement {
+class G_Moveables : public DynamicGraphElement
+{
 
- public:
-        
-        
+public:
+
+
 };
 
 #endif

@@ -1,7 +1,7 @@
-#ifndef __gboard_h_ 
+#ifndef __gboard_h_
 #define __gboard_h_
- #include"object.h"
- #include"graphele.h"
+#include"object.h"
+#include"graphele.h"
 #include"gblank.h"
 #include"vertwall.h"
 #include"horiwall.h"
@@ -28,56 +28,57 @@
 #include"element.h"
 #include"dynamiel.h"
 
-class G_Board : public Object {
+class G_Board : public Object
+{
 
 //pointers to the graphic elements
 
-static G_Blank* blank;
-static VerticalWall* vertical;
-static HorizontalWall* horizontal;
-static Cross* cross;
-static G_SpecialWall* specwall;
-static G_Food* food;
-static G_SuperFood* superfood;
-static E0* e0;
-static E90* e90;
-static E180* e180;
-static E270* e270;
-static T0* t0;
-static T90* t90;
-static T180* t180;
-static T270* t270;
-static Corner1* corner1;
-static Corner2* corner2;
-static Corner3* corner3;
-static Corner4* corner4;
+    static G_Blank* blank;
+    static VerticalWall* vertical;
+    static HorizontalWall* horizontal;
+    static Cross* cross;
+    static G_SpecialWall* specwall;
+    static G_Food* food;
+    static G_SuperFood* superfood;
+    static E0* e0;
+    static E90* e90;
+    static E180* e180;
+    static E270* e270;
+    static T0* t0;
+    static T90* t90;
+    static T180* t180;
+    static T270* t270;
+    static Corner1* corner1;
+    static Corner2* corner2;
+    static Corner3* corner3;
+    static Corner4* corner4;
 
-int eqpat(char [3][3],char[10]);	//equality with wildcard
+    int eqpat(char [3][3],char[10]);	//equality with wildcard
 
-char pattern(char [BOARDHEIGHT+1][BOARDWIDTH+1],int,int);
- //in:board with coordinates, out: the belonging code for the graphic element
+    char pattern(char [BOARDHEIGHT+1][BOARDWIDTH+1],int,int);
+//in:board with coordinates, out: the belonging code for the graphic element
 
-GraphElement *chartograph(char);
- //"translates" graphic element code to pointer to it
+    GraphElement *chartograph(char);
+//"translates" graphic element code to pointer to it
 
-static G_Board* _instance;	 //pointer to the instance of the board
- protected:
+    static G_Board* _instance;	 //pointer to the instance of the board
+protected:
 
- G_Board();             	//constructor
- 
- public:
+    G_Board();             	//constructor
 
- static G_Board* instance();	//returns the pointer to the instance 
- ~G_Board();			//destructor
+public:
 
- GraphElement *graphele(char [BOARDHEIGHT+1][BOARDWIDTH+1],int,int);
-  //translates board info to pointer to graphic element
+    static G_Board* instance();	//returns the pointer to the instance
+    ~G_Board();			//destructor
 
- GraphElement *graphele(char);
-  //the same
+    GraphElement *graphele(char [BOARDHEIGHT+1][BOARDWIDTH+1],int,int);
+    //translates board info to pointer to graphic element
+
+    GraphElement *graphele(char);
+    //the same
 };
 
-#endif  
+#endif
 
 
 

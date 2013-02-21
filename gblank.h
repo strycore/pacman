@@ -1,13 +1,14 @@
-#ifndef __gblank_h_ 
+#ifndef __gblank_h_
 #define __gblank_h_
 #include"gstatele.h"
 
-class G_Blank : public StaticGraphElement {
-         
-public:         
+class G_Blank : public StaticGraphElement
+{
 
-G_Blank();
+public:
+
+    G_Blank();
 
 };
 
-#endif   
+#endif

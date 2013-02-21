@@ -2,11 +2,13 @@
 #include"gbonpnt.h"
 #include"pac.h"
 
-BonusPoint::BonusPoint():Bonus() { 
- g=new G_BonusPoint; 		//new one
- }
+BonusPoint::BonusPoint():Bonus()
+{
+    g=new G_BonusPoint; 		//new one
+}
 
-void BonusPoint::eat(Gamedata* da) { 
- da->scorepluss(BONUSSCORE);	//specific action: increase score 
+void BonusPoint::eat(Gamedata* da)
+{
+    da->scorepluss(BONUSSCORE);	//specific action: increase score
 }
 

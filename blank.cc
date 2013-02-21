@@ -1,7 +1,8 @@
 #include"blank.h"
 #include"gblank.h"
 
-Blank::Blank() {
+Blank::Blank()
+{
 
 }
 

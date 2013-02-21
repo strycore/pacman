@@ -1,14 +1,18 @@
-#ifndef __blank_h_ 
+#ifndef __blank_h_
 #define __blank_h_
 #include"staticel.h"
 
-class Blank : public StaticElement {
-         
-public:         
+class Blank : public StaticElement
+{
 
-Blank();				//constructor         
-typ is_a(void) {return classBlank;}   	//what it is 
+public:
+
+    Blank();				//constructor
+    typ is_a(void)
+    {
+        return classBlank;   //what it is
+    }
 
 };
 
-#endif   
+#endif

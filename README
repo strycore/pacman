@@ -1,6 +1,11 @@
 PACMAN
 
-You are Pacman, and you are supposed to eat all the small dots to get to the next level. You are also supposed to keep away from the ghosts, if they take you, you lose one life, unless you have eaten a large dot, then you can, for a limited amount of time, chase and eat the ghosts. There is also bonus available, for a limited amount of time. An X gives just points, but a little pacman gives an extra life.
+You are Pacman, and you are supposed to eat all the small dots to get to the
+next level. You are also supposed to keep away from the ghosts, if they take
+you, you lose one life, unless you have eaten a large dot, then you can, for a
+limited amount of time, chase and eat the ghosts. There is also bonus
+available, for a limited amount of time. An X gives just points, but a little
+pacman gives an extra life.
 
 You use either keyboard or mouse. Default from start is keyboard.
 
@@ -34,18 +39,18 @@ COMPILING
 
 Two possibilities: use xmkmf or if that doesn't work, gen:
 
-xmkmf:  
+xmkmf:
 xmkmf -a        # this makes the Makefile and the dependencies
-		# continue and 
-                # try ordinary make even if xmkmf gives errors 
+		# continue and
+                # try ordinary make even if xmkmf gives errors
 make; make install; make clean
 #this uses Imakefile, which I am very fresh at...
 
-gen: 
+gen:
 #Program gen uses makeg to make the makefile.
-#then use ordinary make. 
+#then use ordinary make.
 #It may have to be customized because of
-#individual compiler configurations. 
+#individual compiler configurations.
 gen
 make
 

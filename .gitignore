@@ -2,3 +2,4 @@
 obj/
 pacman
 pacman._man
+*.cbTemp

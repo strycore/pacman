@@ -114,13 +114,9 @@ int Pacman::go(direction dd,Gamedata *da)  //what direction to try to move it
         y=yy;  				//set to new coordinates
     }
     break;
-// case BonusLife: { x=xx; y=yy; b->eat(x,y); } break;
-// case BonusPoint: { x=xx; y=yy; b->eat(x,y); } break;
-    default: /*printf("caseerror\n");*/
+    default:
         break;
     }
-//printf("%d\n",d);
-//printf("%s",w);
     return i;	//this i is returned: it is whether pacman moved or not.
 }
 

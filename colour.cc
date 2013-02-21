@@ -1,9 +1,9 @@
-#include<stdio.h>
-#include"colour.h"
-#include<stdlib.h>
-#include<string.h>
-#include"arg.h"
-#include"pac.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "colour.h"
+#include "arg.h"
+#include "pac.h"
 
 COLOURTYPE Colour::MYFOREGROUND=0; //initializers
 COLOURTYPE Colour::MYBACKGROUND=0;
@@ -20,7 +20,9 @@ COLOURTYPE Colour::BONUSPOINTCOLOUR=0;
 COLOURTYPE Colour::BONUSLIFECOLOUR=0;
 
 //plain colour names
-static COLOURNAME black,white,cyan,lightblue,yellow,red,violetred,violet,orangered,deepskyblue,gold,lightyellow,grey,lightgrey,dimgrey,slategrey,darkslategrey,lightslategrey;
+static COLOURNAME black,white,cyan,lightblue,yellow,red,violetred,violet,
+                  orangered,deepskyblue,gold,lightyellow,grey,lightgrey,dimgrey,
+                  slategrey,darkslategrey,lightslategrey;
 
 Colour::Colour(UserInterface* u)  	//constructor
 {
@@ -64,9 +66,7 @@ Colour::Colour(UserInterface* u)  	//constructor
     }
 
     if (colour) {				//if colour chosen
-
         cmap=DefaultColormap(display,DefaultScreen(display));	//get colourmap
-
 //the colour initializing is almost straightforward, you set the RGB
 //mark flags according to what attribute members were set
 //then you allocate the colour, which you get with ?????.pixel
@@ -155,21 +155,6 @@ Colour::Colour(UserInterface* u)  	//constructor
         SUPERFOODCOLOUR =gold.pixel;
         BONUSPOINTCOLOUR =gold.pixel;
         BONUSLIFECOLOUR =gold.pixel;
-        /*
-        #define MYFOREGROUND cyan.pixel
-        #define MYBACKGROUND black.pixel
-        #define WALLCOLOUR deepskyblue.pixel
-        #define PACMANCOLOUR yellow.pixel
-        #define GHOSTCOLOUR1 red.pixel
-        #define GHOSTCOLOUR2 violetred.pixel
-        #define GHOSTCOLOUR3 violet.pixel
-        #define GHOSTCOLOUR4 orangered.pixel
-        #define RUNGHOSTCOLOUR lightblue.pixel
-        #define FOODCOLOUR lightyellow.pixel
-        #define SUPERFOODCOLOUR gold.pixel
-        #define BONUSPOINTCOLOUR gold.pixel
-        #define BONUSLIFECOLOUR gold.pixel
-        */
     } else {					//if no colours chosen
         cmap=DefaultColormap(display,DefaultScreen(display));
 
@@ -222,33 +207,10 @@ Colour::Colour(UserInterface* u)  	//constructor
         SUPERFOODCOLOUR =grey.pixel;
         BONUSPOINTCOLOUR =dimgrey.pixel;
         BONUSLIFECOLOUR =WhitePixel(display,screen);
-        /*
-        #define MYFOREGROUND WhitePixel(display,screen)
-        #define MYBACKGROUND BlackPixel(display,screen)
-        #define WALLCOLOUR darkslategrey.pixel
-        #define PACMANCOLOUR WhitePixel(display,screen)
-        #define GHOSTCOLOUR1 slategrey.pixel
-        #define GHOSTCOLOUR2 slategrey.pixel
-        #define GHOSTCOLOUR3 slategrey.pixel
-        #define GHOSTCOLOUR4 slategrey.pixel
-        #define RUNGHOSTCOLOUR =lightgrey.pixel
-        #define FOODCOLOUR lightgrey.pixel
-        #define SUPERFOODCOLOUR grey.pixel
-        #define BONUSPOINTCOLOUR dimgrey.pixel
-        #define BONUSLIFECOLOUR WhitePixel(display,screen)
-          */
     }
-    /*
-    .red=;
-    .green=;
-    .blue=;
-    .flags=DoRed|DoGreen|DoBlue;
-    if(XAllocColor(display,cmap,&)==0) pacexit("Colour initialization error");
-    */
 }
 
 Colour::~Colour()
 {
     XFreeColormap(display,cmap);	//free the colourmap
 }
-

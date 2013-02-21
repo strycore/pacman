@@ -1,9 +1,9 @@
 #ifndef __colour_h_
 #define __colour_h_
 
-#include"systspec.h"
-#include"usrinter.h"
-#include"object.h"
+#include "systspec.h"
+#include "usrinter.h"
+#include "object.h"
 
 //defines the type of the colour types
 #define COLOURTYPE unsigned long
@@ -32,23 +32,6 @@ public:
     static COLOURTYPE SUPERFOODCOLOUR; //colour of the superfood
     static COLOURTYPE BONUSPOINTCOLOUR;//colour of the bonuspoint bonus
     static COLOURTYPE BONUSLIFECOLOUR; //colour of the bonuslife bonus
-
-    /*
-    #define MYFOREGROUND cyan.pixel
-    #define MYBACKGROUND black.pixel
-    #define WALLCOLOUR deepskyblue.pixel
-    #define PACMANCOLOUR yellow.pixel
-    #define GHOSTCOLOUR1 red.pixel
-    #define GHOSTCOLOUR2 violetred.pixel
-    #define GHOSTCOLOUR3 violet.pixel
-    #define GHOSTCOLOUR4 orangered.pixel
-    #define RUNGHOSTCOLOUR lightblue.pixel
-    #define FOODCOLOUR lightyellow.pixel
-    #define SUPERFOODCOLOUR gold.pixel
-    #define BONUSPOINTCOLOUR gold.pixel
-    #define BONUSLIFECOLOUR gold.pixel
-    */
-
 };
 
 #endif

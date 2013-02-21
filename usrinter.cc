@@ -1,12 +1,13 @@
-#include"usrinter.h"
-#include<stdio.h>
-#include"gpacman.h"
-#include"colour.h"
-#include<stdlib.h>
-#include"arg.h"
-#include"pac.h"
-#include<string.h>
-#include"board.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "usrinter.h"
+#include "gpacman.h"
+#include "colour.h"
+#include "arg.h"
+#include "pac.h"
+#include "board.h"
 
 static GC back;
 

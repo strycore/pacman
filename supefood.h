@@ -8,8 +8,7 @@ class SuperFood : public Edible
 public:
 
     SuperFood();
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classSuperFood;
     }
 

@@ -29,10 +29,8 @@ void G_Pacman::draw(int x,int y,direction d,direction try_d)
     if (d==still) mouth=1;
     if (try_d!=still) look=try_d;
 //if (d==still) mouth=1; else look=d;
-    if (mouth)
-    {
-        switch (look)
-        {
+    if (mouth) {
+        switch (look) {
         case up:
             pixmap=pixu;
             break;
@@ -48,8 +46,7 @@ void G_Pacman::draw(int x,int y,direction d,direction try_d)
         default:
             pacwarning("Gpac");
         }
-    }
-    else pixmap=pix0;
+    } else pixmap=pix0;
     mouth=1-mouth;			//if moving, mouth opens/closing alternating
     GraphElement::draw(x,y);
 }
@@ -62,10 +59,8 @@ GID_TYPE G_Pacman::getgid(direction d,direction try_d)
     if (d==still) mouth=1;
     if (try_d!=still) look=try_d;
 //if (d==still) mouth=1; else look=d;
-    if (mouth)
-    {
-        switch (look)
-        {
+    if (mouth) {
+        switch (look) {
         case up:
             pixmap=pixu;
             break;
@@ -81,8 +76,7 @@ GID_TYPE G_Pacman::getgid(direction d,direction try_d)
         default:
             pacwarning("Gpac");
         }
-    }
-    else pixmap=pix0;
+    } else pixmap=pix0;
     return pixmap;
 }
 

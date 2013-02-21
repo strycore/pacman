@@ -8,8 +8,7 @@ class Walls : public StaticElement
 public:
 
     Walls();
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classWall;
     }
 };

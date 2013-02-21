@@ -8,8 +8,7 @@ class BonusLife : public Bonus
 public:
 
     BonusLife();			//constructor
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classBonusLife;
     }
     void eat(Gamedata*);

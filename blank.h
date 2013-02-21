@@ -8,8 +8,7 @@ class Blank : public StaticElement
 public:
 
     Blank();				//constructor
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classBlank;   //what it is
     }
 

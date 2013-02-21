@@ -33,8 +33,7 @@ double difftime(struct timeval tp1,struct timeval tp2)
     a=tp1.tv_sec-tp2.tv_sec;
     b=tp1.tv_usec-tp2.tv_usec;
 
-    if (b<0)
-    {
+    if (b<0) {
         a--;
         b+= 1000000;
     }
@@ -60,17 +59,15 @@ void timing(int super)          	//do timing/synchronization
 {
     super++;				//divisor
     if (!super) pacexit("super zero");	//if would then be division be zero
-    do
-    {
+    do {
         gettimeofday(tp2,NULL);		//get the time now
         tot_tid=difftime(*tp2,*tp1);		//compute difference between moments
         if (tot_tid<(0.25/super)) 		//if time interval not yet used up
             remain.tv_sec = 0;
         remain.tv_nsec = ((0.25/super) - tot_tid) * 1000000000;
         nanosleep(&remain, NULL);				//sleep
-            ;					//nothing
-    }
-    while (tot_tid<(0.25/super));		//while time interval not used up
+        ;					//nothing
+    } while (tot_tid<(0.25/super));		//while time interval not used up
     cl=times(tmsp); 			//get the time
     *tp1=*tp2;     				//current time will be previous time
 }

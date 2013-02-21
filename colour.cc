@@ -29,8 +29,7 @@ Colour::Colour(UserInterface* u)  	//constructor
     Window window;				//our window
     int screen; 				//our screen
 
-    if (starts)   				//make sure it is initialized just once
-    {
+    if (starts) { 				//make sure it is initialized just once
         pacwarning("Colour is just initialized once\n");
         return;
     }
@@ -48,19 +47,15 @@ Colour::Colour(UserInterface* u)  	//constructor
 
 //the following picks the first argument matching grey or colour
 //in none given, no colour is assumed
-    if (Argument::argc>1)  			//if there are arguments
-    {
+    if (Argument::argc>1) {			//if there are arguments
         char** temp=Argument::args;		//initial pointer to strings
         char* s;				//argument string
-        while(s=*temp)  			//while there is still an argument left
-        {
-            if (!strcmp(s,"grey")) 		//if argument is grey then no colours
-            {
+        while(s=*temp) {			//while there is still an argument left
+            if (!strcmp(s,"grey")) {	//if argument is grey then no colours
                 colour=0;
                 break;
             }
-            if (!strcmp(s,"colour")) 		//if argument is colour then colours
-            {
+            if (!strcmp(s,"colour")) {	//if argument is colour then colours
                 colour=1;
                 break;
             }
@@ -68,8 +63,7 @@ Colour::Colour(UserInterface* u)  	//constructor
         }
     }
 
-    if (colour)  				//if colour chosen
-    {
+    if (colour) {				//if colour chosen
 
         cmap=DefaultColormap(display,DefaultScreen(display));	//get colourmap
 
@@ -176,9 +170,7 @@ Colour::Colour(UserInterface* u)  	//constructor
         #define BONUSPOINTCOLOUR gold.pixel
         #define BONUSLIFECOLOUR gold.pixel
         */
-    }
-    else  					//if no colours chosen
-    {
+    } else {					//if no colours chosen
         cmap=DefaultColormap(display,DefaultScreen(display));
 
         grey.red=192*256;

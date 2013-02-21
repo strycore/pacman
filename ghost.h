@@ -33,8 +33,7 @@ public:
     ~Ghost();				//destructor
     void draw(void);			//draw the ghost
     int go(Pacman*);				//go for pacman: do ghost code
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classGhost;
     }
     void eat(void);				//when pacman eats ghost

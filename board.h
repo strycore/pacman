@@ -23,8 +23,7 @@ static int foods=168;	//how many food items there are on each board
 
 #define initen {0}
 
-static char boards[LEVELS][BOARDHEIGHT+1][BOARDWIDTH+1]=
-{
+static char boards[LEVELS][BOARDHEIGHT+1][BOARDWIDTH+1]= {
     {   {"OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"},
         {"Oo . . .O. . . . . . . .O. . . oO"},
         {"O OOOOO O OOOOOOOOOOOOO O OOOOO O"},
@@ -418,8 +417,7 @@ class G_Board;
 //it includes a pointer to the element, what graphical id it has
 //the coordinates and a pointer to the next element of the structure
 
-struct liststruct
-{
+struct liststruct {
     DynamicElement/* Moveables*/ *g;
     GID_TYPE gid;
     int x,y;

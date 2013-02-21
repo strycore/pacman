@@ -48,24 +48,19 @@ public:
     //with keyboard as default
     ~UserInterface(void); 		//destructor
 
-    static Display* getdisplay() 	//all those are returning corresponding values
-    {
+    static Display* getdisplay() {	//all those are returning corresponding values
         return mydisplay;
     }
-    static Window getwindow()
-    {
+    static Window getwindow() {
         return mywindow;
     }
-    static int getscreen()
-    {
+    static int getscreen() {
         return myscreen;
     }
-    static GC getgc()
-    {
+    static GC getgc() {
         return mygc;
     }
-    static XEvent getevent()
-    {
+    static XEvent getevent() {
         return myevent;
     }
 

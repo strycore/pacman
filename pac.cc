@@ -37,26 +37,19 @@ void check(Board* bo,Gamedata *da,Pacman* pa,Ghost *gh[GHOSTS],Bonus *&bon)
     int x1, y1;			//pacman coordinates
     int x2, y2;			//coordinates for bonus or a ghost
     pa->getxy(&x1,&y1);		//get pacman coordinates
-    if (bon)  			//if there is a bonus on the board
-    {
+    if (bon) {			//if there is a bonus on the board
         bon->getxy(&x2,&y2);		//get bonus coordinates
-        if (x1==x2 && y1==y2)  	//if pacman and bonus coordinates the same
-        {
+        if (x1==x2 && y1==y2) {	//if pacman and bonus coordinates the same
             bon->eat(da);		//then bonus is eaten
             bon=0;
         } 			//and gone
     }
-    for(i=0,alive=1; alive && i<GHOSTS; i++)  	//for all ghosts while p. alive
-    {
+    for(i=0,alive=1; alive && i<GHOSTS; i++) {	//for all ghosts while p. alive
         gh[i]->getxy(&x2,&y2);	//get coordinates
-        if (x1==x2 && y1==y2)  	//if pacman and ghost coordinates the same
-        {
-            if (pa->is_super()) 		//if pacman is super
-            {
+        if (x1==x2 && y1==y2) {	//if pacman and ghost coordinates the same
+            if (pa->is_super()) {	//if pacman is super
                 gh[i]->die(da);		//then ghost dies
-            }
-            else
-            {
+            } else {
                 pa->die(da);		//else pacman dies
                 alive=0;			//set not alive
             }
@@ -111,16 +104,14 @@ main(int argc,char **argv)
     writetext();
 
     done=0; 			//means not done
-    while (!done)   		//while not done
-    {
+    while (!done) { 		//while not done
 
         da->start(); 			//total initialization of the gamedata
         u->write(1,8,da->getlives(),8);
         u->write(1,11,da->getlevel(),8);
         u->write(1,14,da->getbonus(),8);
 
-        while (!done && da->getlives())   //while game not done and pacman still alive
-        {
+        while (!done && da->getlives()) { //while game not done and pacman still alive
 
             board->start(da->getboardlevel());//resets board to a certain level
 
@@ -135,8 +126,7 @@ main(int argc,char **argv)
             board->delta_draw(); 		//draw just the changes of the board
             timingstart(); 			//reset the timer
 
-            while (done==0 && da->getlives() && !da->eatenall())
-            {
+            while (done==0 && da->getlives() && !da->eatenall()) {
                 //while game not done and pacman still alive
                 // and while not all food eaten
 
@@ -154,10 +144,8 @@ main(int argc,char **argv)
                 board->delta_draw(); 		//draw just the changes of the board
                 timing(pac.is_super()); 	//do timing: make the game go smooth enough
                 d=u->stick();			//pacman got direction
-                if (!bon)   			// if no bonus if "on"
-                {
-                    if ((random() & 4095)==0)
-                    {
+                if (!bon) { 			// if no bonus if "on"
+                    if ((random() & 4095)==0) {
                         if (random() & 61440)
                             bon=bonp; 			//if seldom start a bonuspoint
                         else
@@ -165,13 +153,11 @@ main(int argc,char **argv)
                         bon->start();
                     } 		//reset the spesific bonus thing
                 }
-                if (bon)   			//if bonus exists
-                {
+                if (bon) { 			//if bonus exists
                     if (!bon->code()) 		//returns whether the bonus has lived it's time
                         bon=0;
                 } 			// "remove" bonus
-                if (pac.is_super())   		//if pac has eaten superfood do an extra run
-                {
+                if (pac.is_super()) { 		//if pac has eaten superfood do an extra run
                     u->write(1,17,pac.getsupertime(),8);
                     g=pac.go(d,da);		//let pacman go direction d
                     check(board,da,&pac,gh,bon);	// checks whether pacman has eaten the bonus, or pacman or some ghost have met and one of them must "die"
@@ -183,8 +169,7 @@ main(int argc,char **argv)
                     timing(pac.is_super());	//do timing: make the game go smooth enough
                     d=u->stick();			//pacman got direction
                 }
-                if (pac.is_dead())    		// do this if pacman died
-                {
+                if (pac.is_dead()) {  		// do this if pacman died
                     bon=0;                    //no more bonus, is gone
                     u->write(1,8,da->getlives(),8);
                     board->sprite(&pac);	//let it be a sprite
@@ -229,8 +214,7 @@ main(int argc,char **argv)
             }
 
             if (!done) 			//if not done
-                if (!da->eatenall())   		//if not all food eaten
-                {
+                if (!da->eatenall()) { 		//if not all food eaten
                     u->write(1,20,"GAME OVER"); 	//then the game must be over
                     u->waitsync(); 		//wait til everything is printed to screen
                     for(i=0; i<4; i++,timing(0)); 	//wait a sec or something
@@ -239,9 +223,7 @@ main(int argc,char **argv)
                     u->write(1,8,da->getlives(),8);
                     u->write(1,11,da->getlevel(),8);
                     u->write(1,14,da->getbonus(),8);
-                }
-                else    			//all food must have been eaten
-                {
+                } else {  			//all food must have been eaten
                     da->scorepluss(da->getbonus()); 	//add score with bonus
                     da->start2(); 			//prepare gamedata for next level
                     u->write(1,11,da->getlevel(),8);

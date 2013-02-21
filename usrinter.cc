@@ -111,14 +111,11 @@ void UserInterface::waitsync(void)
 int UserInterface::getinput(void)  	//get input whether quit or not,
 {
     //it may also change input type
-    if (QLength(mydisplay)>0)
-    {
+    if (QLength(mydisplay)>0) {
         XNextEvent(mydisplay, &myevent);	//get next event from the queue
 //printf("%d \n",myevent.type);
-        switch (myevent.type)  			//what kind of event was it?
-        {
-        case Expose:
-        {
+        switch (myevent.type) {			//what kind of event was it?
+        case Expose: {
 //  Window root,child;int dumx,dumy;unsigned int keys_buttons;	//dummies
 //  if (myevent.xexpose.count==0) 	//if this is first expose
 //   XQueryPointer(mydisplay,mywindow,&root,&child,&dumx,&dumy,&x,&y,&keys_buttons);
@@ -147,8 +144,7 @@ int UserInterface::getinput(void)  	//get input whether quit or not,
 
     }
 
-    if (in==Mouse)  			//if input is from mouse
-    {
+    if (in==Mouse) {			//if input is from mouse
         Window root,child;
         int dumx,dumy,xx,yy; //dummies
         unsigned int keys_buttons;		//what keys/buttons hit/pressed
@@ -157,21 +153,17 @@ int UserInterface::getinput(void)  	//get input whether quit or not,
             in=Keyboard;				//input type is keyboard
         if ((keys_buttons & Button2Mask) || (keys_buttons & Button3Mask))
             return 1;				//if middle or right is down quit
-    }
-    else  				//else if input is from keyboard
-    {
+    } else {				//else if input is from keyboard
         char key_vector[32];			//denotes 256 possible keys
         XQueryKeymap(mydisplay,key_vector);	//queries and gets data for all keys
 //int kkk; for (kkk=0;kkk<32;kkk++)
 //printf("%x ",key_vector[kkk]);
 //printf("\n");
-        if (check(key_vector,XK_m))		//if m is pressed input type is mouse
-        {
+        if (check(key_vector,XK_m)) {	//if m is pressed input type is mouse
             in=Mouse;
             return 0;
         }
-        if (check(key_vector,XK_M))		//if m is pressed input is keyboard
-        {
+        if (check(key_vector,XK_M)) {	//if m is pressed input is keyboard
             in=Mouse;
             return 0;
         }
@@ -196,8 +188,7 @@ int UserInterface::check(char key_vector[32], KeySym key)
 
 direction UserInterface::stick(void)
 {
-    if (in==Mouse)  						//mouse input
-    {
+    if (in==Mouse) {						//mouse input
         Window root,child;
         int dumx,dumy;
         unsigned int keys_buttons;	//dummies
@@ -213,9 +204,7 @@ direction UserInterface::stick(void)
         if (dx<dy && dx>-dy) return down;
         if (dx<dy && dx<=-dy) return left;
         pacwarning("errorstick\n");	//give warning if not all directons covered
-    }
-    else  			//if input comes from keyboard
-    {
+    } else {			//if input comes from keyboard
         char key_vector[32];		//denotes 256 possible keys
         XQueryKeymap(mydisplay,key_vector);	//queries and gets data for all keys
         if (check(key_vector,XK_Up)) return up;		//if up key pressed, up

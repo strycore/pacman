@@ -26,8 +26,7 @@ public:
     void draw(void);		//specific draw for pacman
     int go(direction,Gamedata*);	//what direction to try to move pacman
     void getxy(int*,int*);
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classPacman;
     }
     int is_super(void); 		//is pacman super?

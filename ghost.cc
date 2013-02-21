@@ -74,28 +74,23 @@ int Ghost::otherdir(int xx,int yy,direction dd)  //is there an other direction t
 {
     int xxx,yyy;			//coordinates
     direction goleft,goright;	//the relative left/right to where a ghost goes
-    switch (dd)  			//find out relative direction
-    {
-    case up:
-    {
+    switch (dd) {			//find out relative direction
+    case up: {
         goleft=left;
         goright=right;
     }
     break;
-    case down:
-    {
+    case down: {
         goleft=right;
         goright=left;
     }
     break;
-    case left:
-    {
+    case left: {
         goleft=up;
         goright=down;
     }
     break;
-    case right:
-    {
+    case right: {
         goleft=down;
         goright=up;
     }
@@ -113,28 +108,23 @@ void Ghost::newdir(int xx,int yy,direction* dd)  //gets a new direction to go
 {
     int xxx,yyy;			//coordinates
     direction goleft,goright;	//the relative left/right to where a ghost goes
-    switch (*dd)  			//find out relative direction
-    {
-    case up:
-    {
+    switch (*dd) {			//find out relative direction
+    case up: {
         goleft=left;
         goright=right;
     }
     break;
-    case down:
-    {
+    case down: {
         goleft=right;
         goright=left;
     }
     break;
-    case left:
-    {
+    case left: {
         goleft=up;
         goright=down;
     }
     break;
-    case right:
-    {
+    case right: {
         goleft=down;
         goright=up;
     }
@@ -147,13 +137,11 @@ void Ghost::newdir(int xx,int yy,direction* dd)  //gets a new direction to go
 //if (goleft==none && goright==none) exit(1);
 //if either is none return the other
 // if (startx==15 && starty==9) printf("change at %d %d\n",x,y);
-    if (goleft==none)
-    {
+    if (goleft==none) {
         *dd=goright;
         return;
     }
-    if (goright==none)
-    {
+    if (goright==none) {
         *dd=goleft;
         return;
     }
@@ -168,8 +156,7 @@ int Ghost::searchpac(direction *dd,int *gox,int *goy,Pacman *pac)  //look for pa
         dx,dy,				//delta goto coordinates
         goxx,goyy;			//goto coordinates
     pac->getxy(&goxx,&goyy);	//get pacman coordinates
-    if (goxx==x || goyy==y)  	//if either x or y coordinates same
-    {
+    if (goxx==x || goyy==y) {	//if either x or y coordinates same
         dx=goxx-x;
         dy=goyy-y;
 //set deltas dx dy to add to x,y to get to goxx goyy
@@ -179,18 +166,15 @@ int Ghost::searchpac(direction *dd,int *gox,int *goy,Pacman *pac)  //look for pa
         if (dy>0) dy=1;
         xx=x;
         yy=y;
-        while (!(xx==goxx && yy==goyy) && b->what_is(xx,yy)!=classWall)
-        {
+        while (!(xx==goxx && yy==goyy) && b->what_is(xx,yy)!=classWall) {
             xx+=dx;
             yy+=dy;
         }
 //checks whether there is a wall between pacman and ghost
-        if (xx==goxx && yy==goyy)  //if no wall hunt pacman
-        {
+        if (xx==goxx && yy==goyy) { //if no wall hunt pacman
             *gox=goxx;
             *goy=goyy;
-            if (st==hunted)
-            {
+            if (st==hunted) {
                 dx=-dx;    //if pacman is super then run
                 dy=-dy;
             }
@@ -209,49 +193,36 @@ void Ghost::lookforpac(Pacman *pac)  //look for pacman
     int i=1;			//ghost moved?
     int xx,yy;			//coordinates
 
-    if (pac->is_super())		// if pacman is super
-    {
+    if (pac->is_super()) {	// if pacman is super
         if (st!=eaten) st=hunted;    //then if ghost is not eaten then it is hunted
-    }
-    else   				//if pacman not super
-    {
-        if (st==hunted)  	//if ghost is (was) hunted it must now be random
-        {
+    } else { 				//if pacman not super
+        if (st==hunted) {	//if ghost is (was) hunted it must now be random
             st=randm; 			//must be random
             ghostseaten=0;		//set number of ghosts eaten back to zero
         }
     }
-    switch (st)  			//case ghost status of
-    {
-    case hunter:  			//if ghost is hunter
-    {
+    switch (st) {			//case ghost status of
+    case hunter: {			//if ghost is hunter
         i=searchpac(&d,&go_x,&go_y,pac);//then search for pacman
-        if (i)  			//if found
-        {
+        if (i) {			//if found
             pac->getxy(&xx,&yy);		//and pacman coordinates
             if (x==xx && y==yy) d=still;	//are equal to ghosts's: stand still
         }
     }
     break;
-    case randm:
-    {
+    case randm: {
         i=searchpac(&d,&go_x,&go_y,pac);	//then search for pacman
-        if (i)  				//if found
-        {
+        if (i) {				//if found
             st=hunter;				//then ghost is a hunter
-        }
-        else
-        {
+        } else {
         }
 
     } break;
-    case hunted:
-    {
+    case hunted: {
         i=searchpac(&d,&go_x,&go_y,pac);	//then search for pacman
     }
     break;
-    case eaten:
-    {
+    case eaten: {
     } break;
     }
 }
@@ -262,28 +233,21 @@ int Ghost::go(Pacman *pac)  	//go for pacman: do ghost code
     int i=1;			//moved or not?
     int xx,yy;			//coordinates
 
-    if (pac->is_super()) 		//if pacman is super
-    {
+    if (pac->is_super()) {	//if pacman is super
         if (st!=eaten) st=hunted;    //if st is not eaten then ghost is hunted
-    }
-    else
-    {
+    } else {
         if (st==hunted) st=randm;    //else if pacman is not and ghost
     }
     //is still hunted then it is now random
-    switch (st)  			//if ghost status is
-    {
-    case hunter:  			//hunter
-    {
+    switch (st) {			//if ghost status is
+    case hunter: {			//hunter
         i=searchpac(&d,&go_x,&go_y,pac);//then search for pacman
-        if (i)   			//if found
-        {
+        if (i) { 			//if found
             pac->getxy(&xx,&yy);		//and pacman coordinates
             if (x==xx && y==yy) d=still;	//are equal to ghosts's: stand still
             break;
         }
-        if (go_x==x && go_y==y)  //if ghost has reached pacman last known coordinates
-        {
+        if (go_x==x && go_y==y) { //if ghost has reached pacman last known coordinates
             pac->getxy(&xx,&yy);	//get pacman coordinates
 //if (!otherdir(x,y,d)) //and if there is not an other possible l/r direction
             newdir(x,y,&d); 	//change direction
@@ -291,34 +255,26 @@ int Ghost::go(Pacman *pac)  	//go for pacman: do ghost code
         }
     }
     break;
-    case randm:  				//if ghost moves at random
-    {
+    case randm: {				//if ghost moves at random
         i=searchpac(&d,&go_x,&go_y,pac);	//then search for pacman
-        if (i)  				//if found
-        {
+        if (i) {				//if found
             st=hunter;				//then ghost is hunter
-        }
-        else
-        {
-            if (otherdir(x,y,d))  //and if there is an other possible l/r direction
-            {
+        } else {
+            if (otherdir(x,y,d)) { //and if there is an other possible l/r direction
                 if (!(random()%randmv)) 	//if random "hits"
                     newdir(x,y,&d); 		//then change direction
             }
         }
     }
     break;
-    case hunted:  			//if the ghost is hunted
-    {
+    case hunted: {			//if the ghost is hunted
         i=searchpac(&d,&go_x,&go_y,pac);//then search for pacman
     }
     break;
-    case eaten:  			//if ghost is eaten
-    {
+    case eaten: {			//if ghost is eaten
         if (deadtime) 		//is > 0
             deadtime--;  		//decrement it by one
-        else
-        {
+        else {
             st=randm; 		//else, if it is zero, then it's status is random
             d=up; 		//and direction is up
         }
@@ -332,11 +288,9 @@ int Ghost::go(Pacman *pac)  	//go for pacman: do ghost code
 //printf("%d %d %d %d %d %d %d %d %d
 //%d\n\n",up,down,left,right,none,still,randm,hunter,hunted,eaten);
 //exit(1);
-    switch (w)  //if w is a
-    {
+    switch (w) { //if w is a
 // case SpecialWall: { x=xx; y=yy; } break;
-    case classWall:
-    {
+    case classWall: {
         i=0; 				//can not go through walls
         newdir(x,y,&d); 		//find a new direction
         next(&xx,&yy,d,x,y); 		//find next coordinates
@@ -349,8 +303,7 @@ int Ghost::go(Pacman *pac)  	//go for pacman: do ghost code
 // case Blank: { x=xx; y=yy; } break;
 // case BonusLife: { x=xx; y=yy; } break;
 // case BonusPoint: { x=xx; y=yy; } break;
-    default:
-    {
+    default: {
         x=xx;
         y=yy;
     }

@@ -49,8 +49,7 @@ char G_Board::pattern(char brett1[BOARDHEIGHT+1][BOARDWIDTH+1],int y,int x)
          pat[3][3];	//to contain the pattern to be compared
     int i,j;   	//plain counters
 
-    switch (t=brett1[y][x])  	//get the code for the Element
-    {
+    switch (t=brett1[y][x]) {	//get the code for the Element
 
 //if it is simple enough, it don't need translation, just return it
     case '_':
@@ -62,8 +61,7 @@ char G_Board::pattern(char brett1[BOARDHEIGHT+1][BOARDWIDTH+1],int y,int x)
     }
 
     for(i=-1; i<=1; i++) 	//traverse the elements around x,y
-        for(j=-1; j<=1; j++)
-        {
+        for(j=-1; j<=1; j++) {
             t='\0';//null
             if (i+x==-1 || i+x==BOARDWIDTH) t=' ';	//if x,y is on border
             if (j+y==-1 || j+y==BOARDHEIGHT) t=' ';	//then space is what's beyond it
@@ -71,8 +69,7 @@ char G_Board::pattern(char brett1[BOARDHEIGHT+1][BOARDWIDTH+1],int y,int x)
             if (u=='_') u='O';				//if u is a specialwall then
             //it is just a wall
 
-            switch (u)  					//if it's a food or superfood
-            {
+            switch (u) {					//if it's a food or superfood
                 //(but not at x,y) it
                 //counts as space
             case '.':
@@ -109,8 +106,7 @@ char G_Board::pattern(char brett1[BOARDHEIGHT+1][BOARDWIDTH+1],int y,int x)
 G_Board::G_Board()  			//constructor
 {
 
-    if (!UserInterface::instance())
-    {
+    if (!UserInterface::instance()) {
         pacexit("no userinterface");
     }
 
@@ -176,8 +172,7 @@ G_Board::~G_Board()  		//destructor
 GraphElement *G_Board::chartograph(char c)  	//return translated code
 {
     GraphElement *g;
-    switch (c)
-    {
+    switch (c) {
     case ' ':
         g=blank;
         break;
@@ -235,8 +230,7 @@ GraphElement *G_Board::chartograph(char c)  	//return translated code
     case 'n':
         g=corner4;
         break;
-    default:
-    {
+    default: {
         g=blank; /*printf("error%d\n",c);*/
     }
     break;

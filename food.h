@@ -7,8 +7,7 @@ class Food : public Edible
 
 public:
 
-    typ is_a(void)
-    {
+    typ is_a(void) {
         return classFood;
     }
 

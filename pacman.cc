@@ -67,15 +67,12 @@ int Pacman::go(direction dd,Gamedata *da)  //what direction to try to move it
     int i=1;	//this i is returned: it is whether pacman moved or not.
     int xx,yy;	//possible next coordinates
     if (dd!=none) try_d=d=dd;//if a direction!=none given, set the two directions
-    if (st==dead)   	//if pacman died
-    {
+    if (st==dead) { 	//if pacman died
         d=still; 		//then actual moving direction is still
         return 0;		//and return not moved
     }
-    switch (st)
-    {
-    case super:  		//if super
-    {
+    switch (st) {
+    case super: {		//if super
         if (supertime) 	//if supertime is > 0
             supertime--; 	//decrement supertime
         else
@@ -89,17 +86,14 @@ int Pacman::go(direction dd,Gamedata *da)  //what direction to try to move it
     next(&xx,&yy,d,x,y);	//compute next coordinates
     w=b->what_is(xx,yy);	//what's at new coordinates
 
-    switch (w)  		//if it's
-    {
+    switch (w) {		//if it's
     case classSpecialWall:
-    case classWall: //can't move through walls
-    {
+    case classWall: { //can't move through walls
         i=0;
         d=still;
     }
     break;
-    case classFood:
-    {
+    case classFood: {
         x=xx;
         y=yy; 				//set to new coordinates
         b->eat(x,y);				//eat food at board coordinates
@@ -107,8 +101,7 @@ int Pacman::go(direction dd,Gamedata *da)  //what direction to try to move it
         da->scorepluss(FOODSCORE); 		//increase the score
     }
     break;
-    case classSuperFood:
-    {
+    case classSuperFood: {
         x=xx;
         y=yy; 				//set to new coordinates
         b->eat(x,y); 				//eat superfood at board coordinates
@@ -116,8 +109,7 @@ int Pacman::go(direction dd,Gamedata *da)  //what direction to try to move it
         supertime=SUPERTIME;			//set supertime, too
     }
     break;
-    case classBlank:
-    {
+    case classBlank: {
         x=xx;
         y=yy;  				//set to new coordinates
     }

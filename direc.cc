@@ -5,8 +5,7 @@ void next(int* x,int* y,direction d,int xx,int yy)
 {
     *x=xx;
     *y=yy;
-    switch (d)
-    {
+    switch (d) {
     case none:
         break;
     case still:

@@ -1042,9 +1042,9 @@ CXXPROJECT_DEFINES =
 # ----------------------------------------------------------------------
 # start of Imakefile
 
-SRCS = arg.cc blank.cc board.cc bonus.cc bonuslif.cc bonuspnt.cc 	colour.cc corner.cc corner1.cc corner2.cc corner3.cc 	corner4.cc cross.cc direc.cc dynamiel.cc e0.cc e180.cc e270.cc 	e90.cc element.cc food.cc gamedata.cc gblank.cc gboard.cc 	gbonlife.cc gbonpnt.cc gdynelem.cc gfood.cc gghost.cc ghost.cc 	gpacman.cc graphele.cc gspecwal.cc gsupfood.cc horiwall.cc 	pac.cc pacman.cc point.cc specwall.cc supefood.cc t0.cc 	t180.cc t270.cc t90.cc timing.cc usrinter.cc vertwall.cc 	walls.cc
+SRCS = arg.cc blank.cc board.cc bonus.cc bonuslif.cc bonuspnt.cc 	colour.cc corner.cc corner1.cc corner2.cc corner3.cc 	corner4.cc cross.cc direc.cc dynamiel.cc e0.cc e180.cc e270.cc 	e90.cc element.cc food.cc gamedata.cc gblank.cc gboard.cc 	gbonlife.cc gbonpnt.cc gdynelem.cc gfood.cc gghost.cc ghost.cc 	gpacman.cc graphele.cc gspecwal.cc gsupfood.cc 	pac.cc pacman.cc point.cc specwall.cc supefood.cc t0.cc 	t180.cc t270.cc t90.cc timing.cc usrinter.cc 	walls.cc
 
-OBJS = arg.o blank.o board.o bonus.o bonuslif.o bonuspnt.o 	colour.o corner.o corner1.o corner2.o corner3.o 	corner4.o cross.o direc.o dynamiel.o e0.o e180.o e270.o 	e90.o element.o food.o gamedata.o gblank.o gboard.o 	gbonlife.o gbonpnt.o gdynelem.o gfood.o gghost.o ghost.o 	gpacman.o graphele.o gspecwal.o gsupfood.o horiwall.o 	pac.o pacman.o point.o specwall.o supefood.o t0.o 	t180.o t270.o t90.o timing.o usrinter.o vertwall.o 	walls.o
+OBJS = arg.o blank.o board.o bonus.o bonuslif.o bonuspnt.o 	colour.o corner.o corner1.o corner2.o corner3.o 	corner4.o cross.o direc.o dynamiel.o e0.o e180.o e270.o 	e90.o element.o food.o gamedata.o gblank.o gboard.o 	gbonlife.o gbonpnt.o gdynelem.o gfood.o gghost.o ghost.o 	gpacman.o graphele.o gspecwal.o gsupfood.o 	pac.o pacman.o point.o specwall.o supefood.o t0.o 	t180.o t270.o t90.o timing.o usrinter.o 	walls.o
 
 CURSES = -lcurses
 
@@ -1223,11 +1223,11 @@ board.o: board.cc board.h object.h basis.h gboard.h graphele.h systspec.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- pac.h blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h pac.h blank.h \
+ staticel.h walls.h specwall.h food.h edible.h supefood.h \
  /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
  /usr/include/wchar.h /usr/lib/gcc/i686-linux-gnu/4.7/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
@@ -1260,12 +1260,12 @@ bonus.o: bonus.cc bonus.h gamedata.h object.h basis.h board.h gboard.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- pac.h blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
- unmovele.h gbonus.h gunmovel.h
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h pac.h blank.h \
+ staticel.h walls.h specwall.h food.h edible.h supefood.h unmovele.h \
+ gbonus.h gunmovel.h
 bonuslif.o: bonuslif.cc bonuslif.h bonus.h gamedata.h object.h basis.h \
  board.h gboard.h graphele.h systspec.h /usr/include/X11/Xlib.h \
  /usr/include/i386-linux-gnu/sys/types.h /usr/include/features.h \
@@ -1290,12 +1290,12 @@ bonuslif.o: bonuslif.cc bonuslif.h bonus.h gamedata.h object.h basis.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- pac.h blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
- unmovele.h gbonus.h gunmovel.h gbonlife.h
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h pac.h blank.h \
+ staticel.h walls.h specwall.h food.h edible.h supefood.h unmovele.h \
+ gbonus.h gunmovel.h gbonlife.h
 bonuspnt.o: bonuspnt.cc bonuspnt.h bonus.h gamedata.h object.h basis.h \
  board.h gboard.h graphele.h systspec.h /usr/include/X11/Xlib.h \
  /usr/include/i386-linux-gnu/sys/types.h /usr/include/features.h \
@@ -1320,12 +1320,12 @@ bonuspnt.o: bonuspnt.cc bonuspnt.h bonus.h gamedata.h object.h basis.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- pac.h blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
- unmovele.h gbonus.h gunmovel.h gbonpnt.h
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h pac.h blank.h \
+ staticel.h walls.h specwall.h food.h edible.h supefood.h unmovele.h \
+ gbonus.h gunmovel.h gbonpnt.h
 colour.o: colour.cc /usr/include/stdio.h /usr/include/features.h \
  /usr/include/stdc-predef.h /usr/include/i386-linux-gnu/bits/predefs.h \
  /usr/include/i386-linux-gnu/sys/cdefs.h \
@@ -1534,11 +1534,11 @@ dynamiel.o: dynamiel.cc dynamiel.h element.h object.h basis.h types.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h graphele.h shapes.h colour.h \
- gdynelem.h board.h gboard.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h pac.h blank.h staticel.h walls.h \
- specwall.h food.h edible.h supefood.h
+ gdynelem.h board.h gboard.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h pac.h blank.h staticel.h walls.h specwall.h food.h \
+ edible.h supefood.h
 e0.o: e0.cc e0.h endwall.h gwalls.h gstatele.h graphele.h systspec.h \
  basis.h /usr/include/X11/Xlib.h /usr/include/i386-linux-gnu/sys/types.h \
  /usr/include/features.h /usr/include/stdc-predef.h \
@@ -1715,11 +1715,11 @@ gamedata.o: gamedata.cc /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
  /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- pac.h blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h pac.h blank.h \
+ staticel.h walls.h specwall.h food.h edible.h supefood.h
 gblank.o: gblank.cc gblank.h gstatele.h graphele.h systspec.h basis.h \
  /usr/include/X11/Xlib.h /usr/include/i386-linux-gnu/sys/types.h \
  /usr/include/features.h /usr/include/stdc-predef.h \
@@ -1769,14 +1769,13 @@ gboard.o: gboard.cc gboard.h object.h basis.h graphele.h systspec.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h usrinter.h sizes.h direc.h \
- shapes.h colour.h types.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h element.h dynamiel.h gdynelem.h \
- board.h pac.h blank.h staticel.h walls.h specwall.h food.h edible.h \
- supefood.h /usr/include/stdio.h /usr/include/libio.h \
- /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.7/include/stdarg.h \
+ shapes.h colour.h types.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h element.h dynamiel.h gdynelem.h board.h pac.h \
+ blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h /usr/lib/gcc/i686-linux-gnu/4.7/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/stdlib.h \
  /usr/include/i386-linux-gnu/bits/waitflags.h \
@@ -1933,13 +1932,12 @@ ghost.o: ghost.cc ghost.h moveable.h gamedata.h object.h basis.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h graphele.h shapes.h colour.h \
- gdynelem.h board.h gboard.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h pac.h blank.h staticel.h walls.h \
- specwall.h food.h edible.h supefood.h gghost.h gmoveabl.h pacman.h \
- gpacman.h /usr/include/stdlib.h \
- /usr/include/i386-linux-gnu/bits/waitflags.h \
+ gdynelem.h board.h gboard.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h pac.h blank.h staticel.h walls.h specwall.h food.h \
+ edible.h supefood.h gghost.h gmoveabl.h pacman.h gpacman.h \
+ /usr/include/stdlib.h /usr/include/i386-linux-gnu/bits/waitflags.h \
  /usr/include/i386-linux-gnu/bits/waitstatus.h /usr/include/xlocale.h \
  /usr/include/alloca.h /usr/include/i386-linux-gnu/bits/stdlib-float.h
 gpacman.o: gpacman.cc gpacman.h gmoveabl.h gdynelem.h graphele.h \
@@ -2049,31 +2047,6 @@ gsupfood.o: gsupfood.cc gsupfood.h gedible.h gstatele.h graphele.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h object.h usrinter.h sizes.h \
  direc.h shapes.h colour.h types.h
-horiwall.o: horiwall.cc horiwall.h strawall.h gwalls.h gstatele.h \
- graphele.h systspec.h basis.h /usr/include/X11/Xlib.h \
- /usr/include/i386-linux-gnu/sys/types.h /usr/include/features.h \
- /usr/include/stdc-predef.h /usr/include/i386-linux-gnu/bits/predefs.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/types.h \
- /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/time.h \
- /usr/lib/gcc/i686-linux-gnu/4.7/include/stddef.h /usr/include/endian.h \
- /usr/include/i386-linux-gnu/bits/endian.h \
- /usr/include/i386-linux-gnu/bits/byteswap.h \
- /usr/include/i386-linux-gnu/bits/byteswap-16.h \
- /usr/include/i386-linux-gnu/sys/select.h \
- /usr/include/i386-linux-gnu/bits/select.h \
- /usr/include/i386-linux-gnu/bits/sigset.h \
- /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/sys/sysmacros.h \
- /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/X11/X.h \
- /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
- /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
- /usr/include/i386-linux-gnu/sys/times.h object.h usrinter.h sizes.h \
- direc.h shapes.h colour.h types.h
 pac.o: pac.cc /usr/include/stdio.h /usr/include/features.h \
  /usr/include/stdc-predef.h /usr/include/i386-linux-gnu/bits/predefs.h \
  /usr/include/i386-linux-gnu/sys/cdefs.h \
@@ -2107,13 +2080,12 @@ pac.o: pac.cc /usr/include/stdio.h /usr/include/features.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h pacman.h moveable.h dynamiel.h \
  element.h types.h graphele.h shapes.h colour.h gdynelem.h board.h \
- gboard.h gblank.h gstatele.h vertwall.h strawall.h gwalls.h horiwall.h \
- cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h \
- e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h \
- corner2.h corner3.h corner4.h blank.h staticel.h walls.h specwall.h \
- food.h edible.h supefood.h gpacman.h gmoveabl.h ghost.h gghost.h \
- bonuslif.h bonus.h unmovele.h gbonus.h gunmovel.h bonuspnt.h timing.h \
- arg.h
+ gboard.h gblank.h gstatele.h gwalls.h cross.h gspecwal.h gfood.h \
+ gedible.h gsupfood.h e0.h endwall.h e90.h e180.h e270.h t0.h twall.h \
+ t90.h t180.h t270.h corner1.h corner.h corner2.h corner3.h corner4.h \
+ blank.h staticel.h walls.h specwall.h food.h edible.h supefood.h \
+ gpacman.h gmoveabl.h ghost.h gghost.h bonuslif.h bonus.h unmovele.h \
+ gbonus.h gunmovel.h bonuspnt.h timing.h arg.h
 pacman.o: pacman.cc pacman.h moveable.h gamedata.h object.h basis.h \
  dynamiel.h element.h types.h usrinter.h sizes.h direc.h systspec.h \
  /usr/include/X11/Xlib.h /usr/include/i386-linux-gnu/sys/types.h \
@@ -2139,11 +2111,11 @@ pacman.o: pacman.cc pacman.h moveable.h gamedata.h object.h basis.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
  /usr/include/i386-linux-gnu/sys/times.h graphele.h shapes.h colour.h \
- gdynelem.h board.h gboard.h gblank.h gstatele.h vertwall.h strawall.h \
- gwalls.h horiwall.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h \
- endwall.h e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h \
- corner.h corner2.h corner3.h corner4.h pac.h blank.h staticel.h walls.h \
- specwall.h food.h edible.h supefood.h gpacman.h gmoveabl.h
+ gdynelem.h board.h gboard.h gblank.h gstatele.h gwalls.h cross.h \
+ gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h e90.h e180.h \
+ e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h corner2.h \
+ corner3.h corner4.h pac.h blank.h staticel.h walls.h specwall.h food.h \
+ edible.h supefood.h gpacman.h gmoveabl.h
 point.o: point.cc point.h object.h basis.h
 specwall.o: specwall.cc specwall.h staticel.h element.h object.h basis.h \
  types.h usrinter.h sizes.h direc.h systspec.h /usr/include/X11/Xlib.h \
@@ -2358,36 +2330,10 @@ usrinter.o: usrinter.cc usrinter.h object.h basis.h sizes.h direc.h \
  /usr/include/i386-linux-gnu/bits/waitstatus.h /usr/include/xlocale.h \
  /usr/include/alloca.h /usr/include/i386-linux-gnu/bits/stdlib-float.h \
  arg.h pac.h /usr/include/string.h board.h gboard.h gblank.h gstatele.h \
- vertwall.h strawall.h gwalls.h horiwall.h cross.h gspecwal.h gfood.h \
- gedible.h gsupfood.h e0.h endwall.h e90.h e180.h e270.h t0.h twall.h \
- t90.h t180.h t270.h corner1.h corner.h corner2.h corner3.h corner4.h \
- element.h dynamiel.h blank.h staticel.h walls.h specwall.h food.h \
- edible.h supefood.h
-vertwall.o: vertwall.cc vertwall.h strawall.h gwalls.h gstatele.h \
- graphele.h systspec.h basis.h /usr/include/X11/Xlib.h \
- /usr/include/i386-linux-gnu/sys/types.h /usr/include/features.h \
- /usr/include/stdc-predef.h /usr/include/i386-linux-gnu/bits/predefs.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/types.h \
- /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/time.h \
- /usr/lib/gcc/i686-linux-gnu/4.7/include/stddef.h /usr/include/endian.h \
- /usr/include/i386-linux-gnu/bits/endian.h \
- /usr/include/i386-linux-gnu/bits/byteswap.h \
- /usr/include/i386-linux-gnu/bits/byteswap-16.h \
- /usr/include/i386-linux-gnu/sys/select.h \
- /usr/include/i386-linux-gnu/bits/select.h \
- /usr/include/i386-linux-gnu/bits/sigset.h \
- /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/sys/sysmacros.h \
- /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/X11/X.h \
- /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
- /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
- /usr/include/i386-linux-gnu/sys/times.h object.h usrinter.h sizes.h \
- direc.h shapes.h colour.h types.h
+ gwalls.h cross.h gspecwal.h gfood.h gedible.h gsupfood.h e0.h endwall.h \
+ e90.h e180.h e270.h t0.h twall.h t90.h t180.h t270.h corner1.h corner.h \
+ corner2.h corner3.h corner4.h element.h dynamiel.h blank.h staticel.h \
+ walls.h specwall.h food.h edible.h supefood.h
 walls.o: walls.cc walls.h staticel.h element.h object.h basis.h types.h \
  usrinter.h sizes.h direc.h systspec.h /usr/include/X11/Xlib.h \
  /usr/include/i386-linux-gnu/sys/types.h /usr/include/features.h \
@@ -2411,4 +2357,5 @@ walls.o: walls.cc walls.h staticel.h element.h object.h basis.h types.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/i386-linux-gnu/sys/time.h \
- /usr/include/i386-linux-gnu/sys/times.h graphele.h shapes.h colour.h
+ /usr/include/i386-linux-gnu/sys/times.h graphele.h shapes.h colour.h \
+ gwalls.h gstatele.h
